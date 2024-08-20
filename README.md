@@ -165,7 +165,7 @@ Flask==3.0.3
 To run the program, simply execute the `app.py` script. a database will be created in the current working directory and the Flask app will be reachable from `localhost:8080` in a web browser.
 
 ```
-> py .\app.py
+> py ./app.py
 ```
 
 **Homepage**

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Todo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+
+        <h1>Todo List - CRUD App Powered by Flask & SQLite</h1>
+        <form action="{{ url_for('insert') }}" method="POST">
+            <input type="text" name="task" placeholder="Enter a new task" required>
+            <button type="submit">Add Task</button>
+        </form>
+        <table id="todo-table">
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Task</th>
+                    <th>Update</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in task_list %}
+                <tr>
+                    <td>{{ item['id'] }}</td>
+                    <td>{{ item['task'] }}</td>
+                    <td>
+                        <a href="{{ url_for('edit', id=item['id']) }}">Edit</a> |
+                        <a href="{{ url_for('delete', id=item['id']) }}">Delete</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

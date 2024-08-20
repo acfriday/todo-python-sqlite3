@@ -187,3 +187,11 @@ To run the program, simply execute the `app.py` script. a database will be creat
 ![image](https://github.com/user-attachments/assets/a4907dcc-5570-478c-b0ae-557edae33173)
 
 ![image](https://github.com/user-attachments/assets/06c33de9-c450-4c7a-b25a-f39c4e91d030)
+
+## Deploy via Docker Compose
+
+Running `docker compose up --detach` at the command line starts the container in the background. The app can be reached in a web browser at `127.0.0.1:8080`
+
+```
+> docker compose up --detach
+```

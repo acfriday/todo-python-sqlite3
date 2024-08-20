@@ -97,7 +97,7 @@ def main():
     except Exception as e:
         print(f"Error loading Flask app: {e}")
     try:
-        app.run(debug=True, host="127.0.0.1", port=8080)
+        app.run(debug=True, host="localhost", port=8080)
     except Exception as e:
         print(f"Error configuring Flask app: {e}")
 

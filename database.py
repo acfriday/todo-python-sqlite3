@@ -27,10 +27,10 @@ def init_table(db_connection):
         table_exists = cursor.fetchone() is not None
         if not table_exists:
             db_connection.execute("""
-                CREATE TABLE IF NOT EXISTS todo_items
-                (id INTEGER PRIMARY KEY AUTOINCREMENT,
-                task TEXT NOT NULL);
-                """)
+                CREATE TABLE IF NOT EXISTS todo_items(
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                task TEXT NOT NULL)
+                """);
             print("++ Created the todo_items table in the todo_database.")
 
 def build():
